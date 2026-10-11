@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  
   cacheComponents: true,
   partialPrefetching: true,
   reactCompiler: true,
@@ -13,6 +14,14 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  images:{
+    remotePatterns:[
+      {
+        protocol:"https",
+        hostname:"ichef.bbci.co.uk"
+      }
+    ]
+  }
 };
 
 export default nextConfig;
